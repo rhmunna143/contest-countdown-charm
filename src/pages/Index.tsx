@@ -1,4 +1,4 @@
-import { Calendar, Clock, MapPin, Code2, Trophy, Sparkles, Target, Crown } from "lucide-react";
+import { Calendar, Clock, MapPin, Code2, Trophy, Sparkles, Award, Shirt, Coffee, Utensils, FileBadge, Cookie, Lock, Users, User, Mic, Gift, Music, Pause } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
 import logo from "@/assets/rmu-logo.png";
 import banner from "@/assets/contest-banner.jpg";
