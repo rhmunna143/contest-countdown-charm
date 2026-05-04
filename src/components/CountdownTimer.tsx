@@ -68,11 +68,17 @@ const CountdownTimer = () => {
   return (
     <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 md:gap-6">
       <Unit value={time.days} label="Days" />
-      <span className="text-4xl sm:text-5xl font-black text-primary/60 -mt-6">:</span>
+      <span className="text-4xl sm:text-5xl font-black text-primary/60 -mt-6">
+        :
+      </span>
       <Unit value={time.hours} label="Hours" />
-      <span className="text-4xl sm:text-5xl font-black text-primary/60 -mt-6">:</span>
+      <span className="text-4xl sm:text-5xl font-black text-primary/60 -mt-6">
+        :
+      </span>
       <Unit value={time.minutes} label="Minutes" />
-      <span className="text-4xl sm:text-5xl font-black text-primary/60 -mt-6">:</span>
+      <span className="text-4xl sm:text-5xl font-black text-primary/60 -mt-6">
+        :
+      </span>
       <Unit value={time.seconds} label="Seconds" />
     </div>
   );
