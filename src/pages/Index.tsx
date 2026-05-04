@@ -1,4 +1,4 @@
-import { Calendar, Clock, MapPin, Code2, Trophy, Sparkles, Award, Shirt, Coffee, Utensils, FileBadge, Cookie, Lock, Users, User, Mic, Gift, Music, Pause } from "lucide-react";
+import { Calendar, Clock, MapPin, Code2, Trophy, Sparkles, Award, Shirt, Coffee, Utensils, FileBadge, Cookie, Lock, Users, User, Mic, Gift, Music, Pause, Crown, Target } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
 import logo from "@/assets/rmu-logo.png";
 import banner from "@/assets/contest-banner.jpg";
@@ -87,6 +87,21 @@ const Index = () => {
                 <item.icon className="w-7 h-7 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
                 <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">{item.label}</p>
                 <p className="text-sm sm:text-base font-bold text-foreground">{item.value}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Highlights */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-4xl mb-10 animate-fade-up" style={{ animationDelay: "0.52s" }}>
+            {[
+              { icon: Sparkles, text: "Showcase Your Skills" },
+              { icon: Crown, text: "Compete With The Best" },
+              { icon: Target, text: "Solve Real Problems" },
+              { icon: Trophy, text: "Win Exciting Prizes" },
+            ].map((item) => (
+              <div key={item.text} className="glass rounded-xl p-4 flex flex-col items-center gap-2 hover:border-primary/50 transition-colors">
+                <item.icon className="w-6 h-6 text-primary" />
+                <p className="text-xs sm:text-sm font-semibold text-foreground/90">{item.text}</p>
               </div>
             ))}
           </div>
