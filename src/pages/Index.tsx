@@ -91,19 +91,68 @@ const Index = () => {
             ))}
           </div>
 
-          {/* Highlights */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-4xl animate-fade-up" style={{ animationDelay: "0.6s" }}>
-            {[
-              { icon: Sparkles, text: "Showcase Your Skills" },
-              { icon: Crown, text: "Compete With The Best" },
-              { icon: Target, text: "Solve Real Problems" },
-              { icon: Trophy, text: "Win Exciting Prizes" },
-            ].map((item) => (
-              <div key={item.text} className="glass rounded-xl p-4 flex flex-col items-center gap-2 hover:border-primary/50 transition-colors">
-                <item.icon className="w-6 h-6 text-primary" />
-                <p className="text-xs sm:text-sm font-semibold text-foreground/90">{item.text}</p>
-              </div>
-            ))}
+          {/* Registration status */}
+          <div className="mb-10 animate-fade-up" style={{ animationDelay: "0.55s" }}>
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-destructive/15 border border-destructive/40 backdrop-blur-md shadow-[0_0_30px_hsl(var(--destructive)/0.35)]">
+              <Lock className="w-5 h-5 text-destructive" />
+              <span className="text-sm sm:text-base font-bold uppercase tracking-widest text-destructive">Registration Closed</span>
+            </div>
+          </div>
+
+          {/* What we are offering */}
+          <div className="w-full max-w-5xl mb-14 animate-fade-up" style={{ animationDelay: "0.6s" }}>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Gift className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl sm:text-3xl font-black text-gradient">We Are Offering</h2>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+              {[
+                { icon: Shirt, text: "T-Shirt" },
+                { icon: Cookie, text: "Snacks" },
+                { icon: Coffee, text: "Coffee (Unlimited)" },
+                { icon: Utensils, text: "Lunch" },
+                { icon: FileBadge, text: "Participation Certificate" },
+                { icon: Award, text: "Crest & Winner Certificates" },
+              ].map((item, i) => (
+                <div key={item.text} className="glass rounded-xl p-4 flex items-center gap-3 hover:scale-105 hover:shadow-cyan transition-all duration-300 group">
+                  <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center shrink-0 group-hover:bg-primary/25 transition-colors">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground">#{i + 1}</p>
+                    <p className="text-sm sm:text-base font-bold text-foreground">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Time Schedule */}
+          <div className="w-full max-w-3xl mb-14 animate-fade-up" style={{ animationDelay: "0.65s" }}>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Clock className="w-6 h-6 text-secondary" />
+              <h2 className="text-2xl sm:text-3xl font-black text-gradient">Time Schedule</h2>
+            </div>
+            <div className="glass rounded-2xl p-4 sm:p-6 space-y-2">
+              {[
+                { icon: User, label: "Token Distribution & Registration", time: "8:30 – 9:30 AM" },
+                { icon: Mic, label: "Opening Ceremony", time: "9:45 – 10:30 AM" },
+                { icon: Code2, label: "Programming Contest (Individual)", time: "11:00 – 12:30 PM" },
+                { icon: Pause, label: "Lunch & Prayer Break", time: "12:30 – 1:30 PM" },
+                { icon: Users, label: "Programming Contest (Group)", time: "1:30 – 3:00 PM" },
+                { icon: Trophy, label: "Prize Giving Ceremony", time: "3:15 – 4:45 PM" },
+                { icon: Pause, label: "Prayer Break", time: "4:45 – 5:15 PM" },
+                { icon: Music, label: "Cultural Evening", time: "5:15 – 6:25 PM" },
+              ].map((row) => (
+                <div key={row.label} className="flex items-center gap-3 sm:gap-4 p-3 rounded-xl hover:bg-primary/5 border border-transparent hover:border-primary/20 transition-all">
+                  <div className="w-9 h-9 rounded-lg bg-secondary/15 flex items-center justify-center shrink-0">
+                    <row.icon className="w-4 h-4 text-secondary" />
+                  </div>
+                  <p className="text-sm sm:text-base font-semibold text-foreground/90 text-left flex-1">{row.label}</p>
+                  <span className="text-xs sm:text-sm font-bold text-primary tabular-nums whitespace-nowrap">{row.time}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Banner preview */}
