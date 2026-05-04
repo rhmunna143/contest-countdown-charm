@@ -123,7 +123,9 @@ const Index = () => {
         <footer className="relative mt-12 border-t border-border/50 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center">
             <p className="text-sm text-muted-foreground">
-              © 2026 Department of CSE, Rabindra Maitree University
+              © 2026 Department of CSE, <a href="https://www.rmu.ac.bd" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                Rabindra Maitree University
+              </a>
             </p>
             <p className="text-sm text-muted-foreground">
               Developed by:{" "}
