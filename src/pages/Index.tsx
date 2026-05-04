@@ -2,6 +2,17 @@ import { Calendar, Clock, MapPin, Code2, Trophy, Sparkles, Award, Shirt, Coffee,
 import CountdownTimer from "@/components/CountdownTimer";
 import logo from "@/assets/rmu-logo.png";
 import banner from "@/assets/contest-banner.jpg";
+import castrolLogo from "@/assets/sponsors/castrol.png";
+import kushtiaIeltsLogo from "@/assets/sponsors/kushtia-ielts.png";
+import techpeaksLogo from "@/assets/sponsors/techpeaks.png";
+import clubLogo from "@/assets/sponsors/club.png";
+
+const sponsors = [
+  { name: "Castrol", logo: castrolLogo, url: "https://www.castrol.com" },
+  { name: "Kushtia IELTS Care", logo: kushtiaIeltsLogo, url: "https://www.facebook.com/KushtiaIELTSCare" },
+  { name: "TechPeaks", logo: techpeaksLogo, url: "https://techpeaks.io" },
+  { name: "RMU Club", logo: clubLogo, url: "https://www.rmu.ac.bd" },
+];
 
 const Index = () => {
   return (
@@ -182,6 +193,38 @@ const Index = () => {
             </div>
           </div>
         </main>
+
+        {/* Sponsored by */}
+        <section className="container mx-auto px-4 pb-10">
+          <div className="glass rounded-2xl p-6 sm:p-8">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Sparkles className="w-5 h-5 text-primary" />
+              <h2 className="text-xl sm:text-2xl font-black text-gradient uppercase tracking-widest">Sponsored By</h2>
+              <Sparkles className="w-5 h-5 text-primary" />
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+              {sponsors.map((s) => (
+                <a
+                  key={s.name}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.name}
+                  className="group relative bg-white rounded-xl p-4 h-24 sm:h-28 flex items-center justify-center shadow-card hover:scale-105 hover:shadow-cyan transition-all duration-300"
+                >
+                  <img
+                    src={s.logo}
+                    alt={`${s.name} logo`}
+                    loading="lazy"
+                    width={512}
+                    height={512}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Footer */}
         <footer className="relative mt-12 border-t border-border/50 backdrop-blur-sm">
