@@ -330,7 +330,7 @@ const Index = () => {
 
         {/* Sponsored by */}
         <section className="container mx-auto px-4 pb-3">
-          <div className="glass rounded-xl p-2.5 sm:p-3">
+          <div className="glass lg:w-2/5 mt-20 mx-auto rounded-xl p-2 sm:p-2">
             <div className="flex items-center justify-center gap-1.5 mb-2">
               <Sparkles className="w-3 h-3 text-primary" />
               <h2 className="text-[10px] font-black text-gradient uppercase tracking-widest">
@@ -346,13 +346,13 @@ const Index = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.name}
-                  className="group relative bg-white rounded-md p-1 w-10 h-5 flex items-center justify-center shadow-sm hover:scale-110 transition-all duration-300"
+                  className="group relative bg-white rounded-md p-1 w-16 h-8 flex items-center justify-center shadow-sm hover:scale-110 transition-all duration-300"
                 >
                   <img
                     src={s.logo}
                     alt={`${s.name} logo`}
                     loading="lazy"
-                    width={40}
+                    width={80}
                     height={20}
                     className="w-full h-full object-contain"
                   />
