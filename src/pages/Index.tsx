@@ -329,16 +329,16 @@ const Index = () => {
         </main>
 
         {/* Sponsored by */}
-        <section className="container mx-auto px-4 pb-6">
-          <div className="glass rounded-2xl p-4 sm:p-5">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <h2 className="text-sm sm:text-base font-black text-gradient uppercase tracking-widest">
+        <section className="container mx-auto px-4 pb-4">
+          <div className="glass rounded-xl p-3 sm:p-4">
+            <div className="flex items-center justify-center gap-1.5 mb-2">
+              <Sparkles className="w-3 h-3 text-primary" />
+              <h2 className="text-[10px] sm:text-xs font-black text-gradient uppercase tracking-widest">
                 Sponsored By
               </h2>
-              <Sparkles className="w-4 h-4 text-primary" />
+              <Sparkles className="w-3 h-3 text-primary" />
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3">
               {sponsors.map((s) => (
                 <a
                   key={s.name}
@@ -346,7 +346,7 @@ const Index = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.name}
-                  className="group relative bg-white rounded-lg p-2 sm:p-3 h-14 sm:h-16 flex items-center justify-center shadow-card hover:scale-105 hover:shadow-cyan transition-all duration-300"
+                  className="group relative bg-white rounded-md p-1.5 h-9 sm:h-10 flex items-center justify-center shadow-sm hover:scale-105 transition-all duration-300"
                 >
                   <img
                     src={s.logo}
