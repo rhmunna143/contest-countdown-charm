@@ -329,16 +329,16 @@ const Index = () => {
         </main>
 
         {/* Sponsored by */}
-        <section className="container mx-auto px-4 pb-4">
-          <div className="glass rounded-xl p-3 sm:p-4">
+        <section className="container mx-auto px-4 pb-3">
+          <div className="glass rounded-xl p-2.5 sm:p-3">
             <div className="flex items-center justify-center gap-1.5 mb-2">
               <Sparkles className="w-3 h-3 text-primary" />
-              <h2 className="text-[10px] sm:text-xs font-black text-gradient uppercase tracking-widest">
+              <h2 className="text-[10px] font-black text-gradient uppercase tracking-widest">
                 Sponsored By
               </h2>
               <Sparkles className="w-3 h-3 text-primary" />
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
               {sponsors.map((s) => (
                 <a
                   key={s.name}
@@ -346,15 +346,15 @@ const Index = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.name}
-                  className="group relative bg-white rounded-md p-1.5 h-9 sm:h-10 flex items-center justify-center shadow-sm hover:scale-105 transition-all duration-300"
+                  className="group relative bg-white rounded-md p-1 w-10 h-5 flex items-center justify-center shadow-sm hover:scale-110 transition-all duration-300"
                 >
                   <img
                     src={s.logo}
                     alt={`${s.name} logo`}
                     loading="lazy"
-                    width={512}
-                    height={512}
-                    className="max-h-full max-w-full object-contain"
+                    width={40}
+                    height={20}
+                    className="w-full h-full object-contain"
                   />
                 </a>
               ))}
