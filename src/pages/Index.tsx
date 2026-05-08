@@ -31,6 +31,8 @@ import certChampion from "@/assets/certificates/champion.jpg";
 import certRunner1 from "@/assets/certificates/runner-up-1.jpg";
 import certRunner2 from "@/assets/certificates/runner-up-2.jpg";
 import CountdownTimer from "@/components/CountdownTimer";
+import SectionNav from "@/components/SectionNav";
+import ScrollToTop from "@/components/ScrollToTop";
 import logo from "@/assets/rmu-logo.png";
 import banner from "@/assets/contest-banner.jpg";
 import castrolLogo from "@/assets/sponsors/castrol.jpeg";
