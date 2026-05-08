@@ -31,6 +31,8 @@ import certChampion from "@/assets/certificates/champion.jpg";
 import certRunner1 from "@/assets/certificates/runner-up-1.jpg";
 import certRunner2 from "@/assets/certificates/runner-up-2.jpg";
 import CountdownTimer from "@/components/CountdownTimer";
+import SectionNav from "@/components/SectionNav";
+import ScrollToTop from "@/components/ScrollToTop";
 import logo from "@/assets/rmu-logo.png";
 import banner from "@/assets/contest-banner.jpg";
 import castrolLogo from "@/assets/sponsors/castrol.jpeg";
@@ -82,9 +84,12 @@ const Index = () => {
         ))}
       </div>
 
+      <SectionNav />
+      <ScrollToTop />
+
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Header */}
-        <header className="container mx-auto px-4 pt-6 sm:pt-8 flex items-center justify-between animate-fade-up">
+        <header id="hero" className="container mx-auto px-4 pt-20 sm:pt-24 flex items-center justify-between animate-fade-up">
           <div className="flex items-center gap-3">
             <div className="relative">
               <div className="absolute inset-0 bg-primary/40 blur-xl rounded-2xl" />
@@ -215,7 +220,8 @@ const Index = () => {
 
           {/* What we are offering */}
           <div
-            className="w-full max-w-5xl mb-14 animate-fade-up"
+            id="offerings"
+            className="w-full max-w-5xl mb-14 animate-fade-up scroll-mt-24"
             style={{ animationDelay: "0.6s" }}
           >
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -255,7 +261,8 @@ const Index = () => {
 
           {/* Time Schedule */}
           <div
-            className="w-full max-w-3xl mb-14 animate-fade-up"
+            id="schedule"
+            className="w-full max-w-3xl mb-14 animate-fade-up scroll-mt-24"
             style={{ animationDelay: "0.65s" }}
           >
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -338,7 +345,7 @@ const Index = () => {
         </main>
 
         {/* Winners */}
-        <section className="container mx-auto px-4 pb-10 animate-fade-up">
+        <section id="winners" className="container mx-auto px-4 pb-10 animate-fade-up scroll-mt-24">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-3">
               <Trophy className="w-7 h-7 text-primary" />
@@ -439,7 +446,7 @@ const Index = () => {
         </section>
 
         {/* Certificates */}
-        <section className="container mx-auto px-4 pb-10 animate-fade-up">
+        <section id="certificates" className="container mx-auto px-4 pb-10 animate-fade-up scroll-mt-24">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-3">
               <ScrollText className="w-7 h-7 text-secondary" />
@@ -488,7 +495,7 @@ const Index = () => {
 
 
         {/* Sponsored by */}
-        <section className="container mx-auto px-4 pb-3">
+        <section id="sponsors" className="container mx-auto px-4 pb-3 scroll-mt-24">
           <div className="glass lg:w-2/5 mt-20 mx-auto rounded-xl p-2 sm:p-2">
             <div className="flex items-center justify-center gap-1.5 mb-2">
               <Sparkles className="w-3 h-3 text-primary" />
