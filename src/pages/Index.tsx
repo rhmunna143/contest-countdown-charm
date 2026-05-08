@@ -20,7 +20,16 @@ import {
   Pause,
   Crown,
   Target,
+  Medal,
+  Star,
+  ScrollText,
 } from "lucide-react";
+import rohanImg from "@/assets/winners/rohan-mulla.png";
+import shrabonyImg from "@/assets/winners/shrabony-akter.png";
+import rabbiImg from "@/assets/winners/rabbi-haque-munna.png";
+import certChampion from "@/assets/certificates/champion.jpg";
+import certRunner1 from "@/assets/certificates/runner-up-1.jpg";
+import certRunner2 from "@/assets/certificates/runner-up-2.jpg";
 import CountdownTimer from "@/components/CountdownTimer";
 import logo from "@/assets/rmu-logo.png";
 import banner from "@/assets/contest-banner.jpg";
