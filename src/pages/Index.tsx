@@ -495,7 +495,7 @@ const Index = () => {
 
 
         {/* Sponsored by */}
-        <section className="container mx-auto px-4 pb-3">
+        <section id="sponsors" className="container mx-auto px-4 pb-3 scroll-mt-24">
           <div className="glass lg:w-2/5 mt-20 mx-auto rounded-xl p-2 sm:p-2">
             <div className="flex items-center justify-center gap-1.5 mb-2">
               <Sparkles className="w-3 h-3 text-primary" />
