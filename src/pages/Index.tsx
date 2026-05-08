@@ -20,7 +20,16 @@ import {
   Pause,
   Crown,
   Target,
+  Medal,
+  Star,
+  ScrollText,
 } from "lucide-react";
+import rohanImg from "@/assets/winners/rohan-mulla.png";
+import shrabonyImg from "@/assets/winners/shrabony-akter.png";
+import rabbiImg from "@/assets/winners/rabbi-haque-munna.png";
+import certChampion from "@/assets/certificates/champion.jpg";
+import certRunner1 from "@/assets/certificates/runner-up-1.jpg";
+import certRunner2 from "@/assets/certificates/runner-up-2.jpg";
 import CountdownTimer from "@/components/CountdownTimer";
 import logo from "@/assets/rmu-logo.png";
 import banner from "@/assets/contest-banner.jpg";
@@ -327,6 +336,156 @@ const Index = () => {
             </div>
           </div>
         </main>
+
+        {/* Winners */}
+        <section className="container mx-auto px-4 pb-10 animate-fade-up">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <Trophy className="w-7 h-7 text-primary" />
+              <h2 className="text-3xl sm:text-5xl font-black text-gradient uppercase tracking-tight">
+                Winners
+              </h2>
+              <Trophy className="w-7 h-7 text-primary" />
+            </div>
+            <p className="text-center text-sm sm:text-base text-muted-foreground mb-10 uppercase tracking-[0.3em]">
+              Individual Contest · Champions Crowned
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 items-end">
+              {[
+                {
+                  rank: "2nd Runner Up",
+                  name: "Md. Rabbi Haque Munna",
+                  img: rabbiImg,
+                  icon: Medal,
+                  badge: "3rd",
+                  height: "h-72 sm:h-80",
+                  glow: "shadow-card",
+                  ring: "ring-orange-400/60",
+                  order: "md:order-1",
+                  accent: "from-orange-500/30 to-orange-700/10",
+                },
+                {
+                  rank: "Champion",
+                  name: "Md. Rohan Mulla",
+                  img: rohanImg,
+                  icon: Crown,
+                  badge: "1st",
+                  height: "h-80 sm:h-96",
+                  glow: "shadow-glow",
+                  ring: "ring-primary/70",
+                  order: "md:order-2",
+                  accent: "from-primary/40 to-secondary/20",
+                },
+                {
+                  rank: "1st Runner Up",
+                  name: "Mst. Shrabony Akter",
+                  img: shrabonyImg,
+                  icon: Medal,
+                  badge: "2nd",
+                  height: "h-72 sm:h-80",
+                  glow: "shadow-cyan",
+                  ring: "ring-secondary/60",
+                  order: "md:order-3",
+                  accent: "from-secondary/30 to-accent/10",
+                },
+              ].map((w) => (
+                <div
+                  key={w.name}
+                  className={`relative group ${w.order}`}
+                >
+                  <div
+                    className={`relative glass rounded-3xl overflow-hidden ${w.glow} hover:scale-[1.03] transition-all duration-500 ring-2 ${w.ring}`}
+                  >
+                    {/* Rank badge */}
+                    <div className="absolute top-4 left-4 z-20 flex items-center gap-1.5 px-3 py-1 rounded-full bg-background/80 backdrop-blur-md border border-primary/40">
+                      <w.icon className="w-4 h-4 text-primary" />
+                      <span className="text-xs font-black uppercase tracking-widest text-foreground">
+                        {w.badge}
+                      </span>
+                    </div>
+
+                    {/* Sparkle */}
+                    <Star className="absolute top-4 right-4 z-20 w-5 h-5 text-primary animate-pulse-glow" />
+
+                    {/* Image */}
+                    <div
+                      className={`relative ${w.height} bg-gradient-to-br ${w.accent} overflow-hidden`}
+                    >
+                      <div className="absolute inset-0 grid-bg opacity-30" />
+                      <img
+                        src={w.img}
+                        alt={`${w.name} - ${w.rank}`}
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-contain object-bottom drop-shadow-2xl group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/95 to-transparent" />
+                    </div>
+
+                    {/* Info */}
+                    <div className="relative p-5 text-center border-t border-border/50">
+                      <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-primary font-bold mb-1.5">
+                        {w.rank}
+                      </p>
+                      <h3 className="text-lg sm:text-xl font-black text-foreground leading-tight">
+                        {w.name}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Certificates */}
+        <section className="container mx-auto px-4 pb-10 animate-fade-up">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <ScrollText className="w-7 h-7 text-secondary" />
+              <h2 className="text-3xl sm:text-5xl font-black text-gradient uppercase tracking-tight">
+                Certificates
+              </h2>
+              <ScrollText className="w-7 h-7 text-secondary" />
+            </div>
+            <p className="text-center text-sm sm:text-base text-muted-foreground mb-10 uppercase tracking-[0.3em]">
+              Honoring Excellence · Officially Awarded
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { src: certChampion, label: "Champion", name: "Md. Rohan Mulla", rotate: "md:-rotate-2" },
+                { src: certRunner1, label: "1st Runner Up", name: "Mst. Shrabony Akter", rotate: "md:rotate-1" },
+                { src: certRunner2, label: "2nd Runner Up", name: "Md. Rabbi Haque Munna", rotate: "md:-rotate-1" },
+              ].map((c) => (
+                <a
+                  key={c.name}
+                  href={c.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group relative block ${c.rotate} hover:rotate-0 hover:scale-105 transition-all duration-500`}
+                >
+                  <div className="absolute -inset-1 bg-gradient-to-br from-primary/40 via-secondary/30 to-accent/40 rounded-2xl blur opacity-50 group-hover:opacity-90 transition-opacity" />
+                  <div className="relative bg-white rounded-xl overflow-hidden shadow-card border-4 border-white">
+                    <img
+                      src={c.src}
+                      alt={`${c.label} certificate awarded to ${c.name}`}
+                      loading="lazy"
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                  <div className="mt-3 text-center">
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-primary font-bold">
+                      {c.label}
+                    </p>
+                    <p className="text-sm font-bold text-foreground">{c.name}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
 
         {/* Sponsored by */}
         <section className="container mx-auto px-4 pb-3">
