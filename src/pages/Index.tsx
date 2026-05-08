@@ -220,7 +220,8 @@ const Index = () => {
 
           {/* What we are offering */}
           <div
-            className="w-full max-w-5xl mb-14 animate-fade-up"
+            id="offerings"
+            className="w-full max-w-5xl mb-14 animate-fade-up scroll-mt-24"
             style={{ animationDelay: "0.6s" }}
           >
             <div className="flex items-center justify-center gap-3 mb-6">
