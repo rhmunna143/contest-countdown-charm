@@ -261,7 +261,8 @@ const Index = () => {
 
           {/* Time Schedule */}
           <div
-            className="w-full max-w-3xl mb-14 animate-fade-up"
+            id="schedule"
+            className="w-full max-w-3xl mb-14 animate-fade-up scroll-mt-24"
             style={{ animationDelay: "0.65s" }}
           >
             <div className="flex items-center justify-center gap-3 mb-6">
