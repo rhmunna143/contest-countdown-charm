@@ -530,7 +530,7 @@ const Index = () => {
 
         {/* Footer */}
         <footer className="relative mt-12 border-t border-border/50 backdrop-blur-sm">
-          <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center">
+          <div className="container lg:w-2/3 mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center">
             <p className="text-sm text-muted-foreground">
               © 2026 Department of CSE,{" "}
               <a
