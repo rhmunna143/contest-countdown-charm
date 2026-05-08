@@ -345,7 +345,7 @@ const Index = () => {
         </main>
 
         {/* Winners */}
-        <section className="container mx-auto px-4 pb-10 animate-fade-up">
+        <section id="winners" className="container mx-auto px-4 pb-10 animate-fade-up scroll-mt-24">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-3">
               <Trophy className="w-7 h-7 text-primary" />
