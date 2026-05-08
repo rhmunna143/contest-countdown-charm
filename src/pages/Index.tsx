@@ -84,9 +84,12 @@ const Index = () => {
         ))}
       </div>
 
+      <SectionNav />
+      <ScrollToTop />
+
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Header */}
-        <header className="container mx-auto px-4 pt-6 sm:pt-8 flex items-center justify-between animate-fade-up">
+        <header id="hero" className="container mx-auto px-4 pt-20 sm:pt-24 flex items-center justify-between animate-fade-up">
           <div className="flex items-center gap-3">
             <div className="relative">
               <div className="absolute inset-0 bg-primary/40 blur-xl rounded-2xl" />
